@@ -190,5 +190,3 @@ The solution u depends continuously on the data,
 $$
 \|u\|\leq\dfrac1\alpha \| l \| _{V\prime} +( \dfrac M\alpha + 1) \|\widetilde u_0 \|_X
 $$
-
-To 
