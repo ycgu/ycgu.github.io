@@ -1,0 +1,258 @@
+<h1 id="the-orthogonal-decomposition-theorem">The Orthogonal
+Decomposition Theorem</h1>
+<p>Let <span class="math inline">\(V\)</span> be a Hilbert space and
+<span class="math inline">\(M\subset V\)</span> a closed subspace of
+<span class="math inline">\(V\)</span>. Then (i) <span
+class="math inline">\(M^\bot\)</span> is a closed subspace of <span
+class="math inline">\(V\)</span>. (ii) <span
+class="math inline">\(V\)</span> can be represented as the direct sum of
+<span class="math inline">\(M\)</span> and its orthogonal complement
+<span class="math inline">\(M^\bot\)</span></p>
+<p><span class="math display">\[
+V=M\oplus M^\bot
+\]</span></p>
+<p>i.e., every vector <span class="math inline">\(v\in V\)</span> can be
+uniquely decomposed into two orthogonal vectors <span
+class="math inline">\(\boldsymbol m\)</span>, <span
+class="math inline">\(\boldsymbol n\)</span>, s.t.</p>
+<p><span class="math display">\[
+\boldsymbol v=\boldsymbol m+\boldsymbol n, \boldsymbol m\in
+M,\boldsymbol n\in M^\bot
+\]</span></p>
+<p><strong>COROLLARY</strong> Let <span class="math inline">\(V\)</span>
+be a Hilbert space and <span class="math inline">\(M\)</span> a vector
+subspace of <span class="math inline">\(V\)</span> . The following
+conditions are equivalent to each other (i) <span
+class="math inline">\(M\)</span> is closed. (ii) <span
+class="math inline">\((M^\bot)^\bot = M\)</span>.</p>
+<h1 id="orthogonal-projection">Orthogonal projection</h1>
+<p>Let <span class="math inline">\(M\)</span> be a closed subspace of a
+Hilbert space <span class="math inline">\(V\)</span>. The linear
+projection <span class="math inline">\(P_M\)</span> corresponding to the
+decomposition</p>
+<p><span class="math display">\[
+V=M\oplus M^\bot, \boldsymbol v=\boldsymbol m+\boldsymbol n
+\]</span></p>
+<p>and prescribing for any vector <span
+class="math inline">\(\boldsymbol v\)</span> its <span
+class="math inline">\(\boldsymbol m\)</span> component <span
+class="math display">\[
+P_M:V\to V, P_M\boldsymbol v=\boldsymbol m
+\]</span> is called the orthogonal projection onto the subspace <span
+class="math inline">\(M\)</span> s.t. <span
+class="math inline">\(\parallel P_M\parallel=1\)</span> (unit norm).</p>
+<h1 id="riesz-representation-theorem">Riesz Representation Theorem</h1>
+<p>Let <span class="math inline">\(V\)</span> be a Hilbert space and let
+<span class="math inline">\(f\)</span> be a continuous linear functional
+on <span class="math inline">\(V\)</span>. Then there exists a unique
+element <span class="math inline">\(\boldsymbol u\in V\)</span> such
+that <span class="math display">\[
+f(\boldsymbol v) = (\boldsymbol v,\boldsymbol u),\;\forall \boldsymbol
+v\in V
+\]</span> where <span
+class="math inline">\(\left(\cdot,\cdot\right)\)</span> is the scalar
+product on <span class="math inline">\(V\)</span>. Moreover, <span
+class="math display">\[
+\| f\|_{V\prime} =\|\boldsymbol u\|_V
+\]</span></p>
+<h2 id="corollary">COROLLARY</h2>
+<p>Let <span class="math inline">\(R: V\to V\prime\)</span> denote the
+map from a Hilbert space <span class="math inline">\(V\)</span> onto its
+dual <span class="math inline">\(V\prime\)</span> such that <span
+class="math display">\[
+\langle R\boldsymbol u,\boldsymbol v\rangle= (\boldsymbol u,\boldsymbol
+v),\;\forall \boldsymbol u,\boldsymbol v\in V
+\]</span> Then: (i) <span class="math inline">\(R\)</span> is an
+<strong>antilinear</strong> map from <span
+class="math inline">\(V\)</span> onto <span
+class="math inline">\(V\prime\)</span>. (ii) <span
+class="math inline">\(R\)</span> preserves the norm, i.e., <span
+class="math display">\[
+\|R\boldsymbol u\|_{V\prime} = \|\boldsymbol u\|_V
+\]</span> In particular, in the case of a real Hilbert space <span
+class="math inline">\(V\)</span> , <span
+class="math inline">\(R\)</span> is a linear norm-preserving isomorphism
+(surjective isometry) from <span class="math inline">\(V\)</span> onto
+<span class="math inline">\(V\prime\)</span>. <span
+class="math inline">\(R\)</span> is also known as
+<strong><em>Riesz</em></strong> map to identify the topological dual of
+<span class="math inline">\(V\)</span> with itself.</p>
+<p>Applying the Riesz representation theorem to the dual space <span
+class="math inline">\(V\prime\)</span>, we can introduce the Riesz map
+for the dual space as <span class="math display">\[
+R_{V\prime}:V\prime\ni
+g\to\{f\to(f,g)_{V\prime}\in\mathbb{C}\}\in(V\prime)\prime
+\]</span> where<span class="math inline">\((V\prime)\prime\)</span> is
+the bidual of <span class="math inline">\(V\)</span>.</p>
+<h1 id="adjoint-of-a-continuous-operator">Adjoint of a Continuous
+Operator</h1>
+<p>Let <span class="math inline">\(U\)</span>, <span
+class="math inline">\(V\)</span>, <span class="math inline">\(W\)</span>
+be inner product spaces and let <span class="math inline">\(A\)</span>,
+<span class="math inline">\(A_i\in\mathcal L(U,V), i = 1,2\)</span>, and
+<span class="math inline">\(B\in \mathcal L(V,W)\)</span>. The following
+properties hold. (i) Adjoint of a linear combination of operators is
+equal to the linear combination of the corresponding adjoint operators
+with complex conjugate coefficients <span class="math display">\[
+(\alpha_1A_1 + \alpha_2A_2)^\ast =\overline\alpha_1A^\ast_1 +
+\overline\alpha_2A^\ast_2
+\]</span> (ii) Adjoint of a composition is equal to the composition of
+the adjoint operators with inverted order <span class="math display">\[
+(B\circ A)^\ast = A^\ast\circ B^\ast
+\]</span> (iii) Adjoint of the identity operator equals the operator
+itself <span class="math display">\[
+(id_U )^\ast = id_U
+\]</span> (iv) If the inverse <span
+class="math inline">\(A^{−1}\)</span> exists and is continuous then
+<span class="math inline">\(A^\ast\)</span> has a continuous inverse
+too, and <span class="math display">\[
+(A^\ast)^{−1} = (A^{−1})^\ast
+\]</span> (v) Norm of the adjoint equals norm of the operator <span
+class="math display">\[
+\|A\|_{\mathcal L(U,V )} = \|A^\ast\|_{\mathcal L(V,U)}
+\]</span> (vi) Adjoint of the adjoint coincides with the original
+operator <span class="math display">\[
+(A^\ast)^\ast = A
+\]</span></p>
+<h1 id="symmetric-and-self-adjoint-operators.">Symmetric and
+Self-Adjoint Operators.</h1>
+<p>An operator <span class="math inline">\(A\)</span> defined on a dense
+subspace <span class="math inline">\(D(A)\)</span> of a Hilbert space
+<span class="math inline">\(U\)</span> into itself is said to be
+symmetric, if <span class="math inline">\(A\subset A^\ast\)</span>,
+i.e., <span class="math display">\[
+D(A)\subset D(A^\ast) \;and\; A^\ast|_{D(A)} = A
+\]</span> If, additionally, the domains of both operators are the same,
+i.e., <span class="math inline">\(A = A^\ast\)</span>, then we say that
+operator <span class="math inline">\(A\)</span> is self-adjoint.
+Obviously, every self-adjoint operator is symmetric, but not conversely.
+In the case of a continuous and symmetric operator <span
+class="math inline">\(A\)</span> defined on the whole space <span
+class="math inline">\(U\)</span>, however, the adjoint <span
+class="math inline">\(A^\ast\)</span> is defined on the whole <span
+class="math inline">\(U\)</span> as well, and, therefore, <span
+class="math inline">\(A\)</span> is automatically self-adjoint.</p>
+<h2 id="example">Example</h2>
+<p>Orthogonal projections in a Hilbert space are self-adjoint. Indeed,
+let <span class="math inline">\(M\)</span> be a closed subspace of a
+Hilbert space <span class="math inline">\(V\)</span> and <span
+class="math inline">\(P\)</span> the corresponding orthogonal projection
+on <span class="math inline">\(M\)</span>, i.e., if <span
+class="math display">\[
+\boldsymbol u=\boldsymbol u_1+\boldsymbol u_2\; where\; \boldsymbol
+u_1\in M,\boldsymbol u_2\in M^\bot
+\]</span> then <span class="math inline">\(P\boldsymbol u=\boldsymbol
+u_1\)</span>. Similarly, <span class="math inline">\(P\boldsymbol
+v=\boldsymbol v_1,\;for\; \boldsymbol v=\boldsymbol v_1+\boldsymbol v_2,
+\boldsymbol v_1\in M, \boldsymbol v_2\in M^\bot\)</span>. We have <span
+class="math display">\[
+(P\boldsymbol u,\boldsymbol v)=(\boldsymbol u_1,\boldsymbol
+v)=(\boldsymbol u_1,\boldsymbol v_1 +\boldsymbol v_2)= (\boldsymbol
+u_1,\boldsymbol v_1) = (\boldsymbol u_1 +\boldsymbol u_2,\boldsymbol
+v_1) = (\boldsymbol u,\boldsymbol v_1) = (\boldsymbol u,P\boldsymbol v)
+\]</span> for every <span class="math inline">\(\boldsymbol u,
+\boldsymbol v\in V\)</span>.</p>
+<h1 id="some-norms-in-soblev-spaces">Some norms in Soblev Spaces</h1>
+<p>Classical <span class="math inline">\(H^1\)</span> Sobolev space
+consisting of all <span class="math inline">\(L^2\)</span>-functions
+whose distributional derivatives are also functions, and they are <span
+class="math inline">\(L^2\)</span>-integrable as well, <span
+class="math display">\[
+H^1(\Omega) :=\{u\in L^2(\Omega) : \dfrac{\partial u}{\partial x_i} \in
+L^2(\Omega), i = 1,\;\cdots,N\}
+\]</span> The space is equipped with the norm, <span
+class="math display">\[
+\|u\|_{H^1}^2 :=\|u\|^2 + \sum_{i=1}^N\|\dfrac{\partial u}{\partial
+x_i}\|^2
+\]</span> where <span class="math inline">\(\| \cdot \|\)</span> denotes
+the <span class="math inline">\(L^2\)</span>-norm. The second term
+constitutes a seminorm on <span
+class="math inline">\(H^1(\Omega)\)</span> and will be denoted by <span
+class="math display">\[
+|u|^2_{H_1}:= \sum_{i=1}^N \|\dfrac{\partial u}{\partial x_i}\|^2
+\]</span> The second space, <span
+class="math inline">\(H(div,\Omega)\)</span>, consists of all
+vector-valued <span class="math inline">\(L^2\)</span>-integrable
+functions whose distributional divergence is also a function, and it is
+<span class="math inline">\(L^2\)</span>-integrable, <span
+class="math display">\[
+H(div, \Omega) := \{\boldsymbol\sigma = (\sigma_i)^N_{i=1} \in
+(L^2(\Omega))^N : div\;\boldsymbol\sigma \in L^2(\Omega)\}
+\]</span> The space is equipped with the norm, <span
+class="math display">\[
+\|\boldsymbol\sigma\|^2_{H(div)} := \|\boldsymbol\sigma\|^2 +
+\|div\;\boldsymbol\sigma\|^2
+\]</span> where the <span class="math inline">\(L^2\)</span>-norm of
+vector-valued functions is computed componentwise, <span
+class="math display">\[
+\|\boldsymbol\sigma\|^2 := \sum_{i=1}^N \|\sigma_i\|^2
+\]</span></p>
+<h2 id="example-1">Example</h2>
+<p>The classical integration by parts formula generalizes to the energy
+spaces, <span class="math display">\[
+(\boldsymbol\sigma,\nabla
+u)=−(div\;\boldsymbol\sigma,u)+\langle\sigma_n,u\rangle,
+\boldsymbol\sigma\in H(div,\Omega),u\in H_1(\Omega)
+\]</span> The brackets <span
+class="math inline">\(\langle\cdot,\cdot\rangle\)</span> denote the
+duality pairing between <span
+class="math inline">\(H^{1/2}(\Gamma)\)</span> and <span
+class="math inline">\(H^{−1/2}(\Gamma)\)</span> (topological dual of
+each other) that generalizes the usual integral over the boundary.</p>
+<p>Since boundary conditions are imposed by trace operators, we will
+need the following subspaces of the energy spaces, <span
+class="math display">\[
+H^1_{\Gamma_1} (\Omega):=\{u\in H^1(\Omega) : u=0\;on\;\Gamma_1\}
+\]</span> <span class="math display">\[
+H_{\Gamma_2}(div,\Omega):=\{\boldsymbol\sigma\in H(div,\Omega) :
+\sigma_n =0\;on\;\Gamma_2\}
+\]</span></p>
+<p>As for regular functions, we have <span class="math display">\[
+(\boldsymbol\sigma,\nabla
+u)=−(\nabla\cdot\boldsymbol\sigma,u)\;\boldsymbol\sigma\in
+H_{\Gamma_2}(div,\Omega),u\in H_{\Gamma_1}^1 (\Omega)
+\]</span></p>
+<h1
+id="variational-formulation-for-diffusion-convection-reaction-eqaution">Variational
+formulation for diffusion-convection-reaction eqaution</h1>
+<p><span class="math display">\[
+\left\{\begin{array}{ll}
+u\in H^1_{\Gamma_1}(\Omega) \\[2ex]
+\displaystyle{\int_\Omega}(a_{ij}u_{,j}v_{,i} − b_iuv_{,i} + cuv) =
+{\int_\Omega} fv \;\;\;v\in H_{\Gamma_1}^1 (\Omega)
+\end{array}\right.
+\]</span></p>
+<p><strong><em>Note</em></strong>: The convection term is also
+integrated by parts here to avoid integrable requirement for high-order
+derivative of <span class="math inline">\(b\)</span>.</p>
+<h2 id="poincaré-inequality">Poincaré Inequality</h2>
+<p>There exists a positive constant <span class="math inline">\(c &gt;
+0\)</span> such that <span class="math display">\[
+c\|u\|^2 \leq |u|^2_{H^1}
+\]</span> for all <span class="math inline">\(u \in H^1(\Omega)\)</span>
+that vanish on <span class="math inline">\(\Gamma_1\)</span>.</p>
+<h2 id="lax-milgram-theorem">Lax-Milgram theorem</h2>
+<p>Let <span class="math inline">\(X\)</span> be a Hilbert space with a
+closed subspace <span class="math inline">\(V\)</span> and let <span
+class="math inline">\(b : X\times X \to
+\mathbb{R}\;(or\;\mathbb{C})\)</span> be a sesquilinear continuous form
+that is V-coercive (some authors say V-elliptic), i.e., a constant <span
+class="math inline">\(\alpha &gt; 0\)</span> exists such that <span
+class="math display">\[
+|b(v,v)| \geq \alpha\|v\|^2_X\;\;\; \forall v \in V
+\]</span> Then, for every antilinear and continuous functional <span
+class="math inline">\(l\)</span> on <span
+class="math inline">\(V\)</span>, <span class="math inline">\(l \in
+V\prime\)</span>, and element <span class="math inline">\(\widetilde u_0
+\in X\)</span>, there exists a unique solution to the abstract
+variational problem <span class="math display">\[
+\left\{\begin{array}{ll}
+Find\;u\in\widetilde  u_0+V\;such\;that \\[2ex]
+b(u,v) = l(v) \;\;\;\forall v \in V
+\end{array}\right.
+\]</span> The solution u depends continuously on the data, <span
+class="math display">\[
+\|u\|\leq\dfrac1\alpha \| l \| _{V\prime} +( \dfrac M\alpha + 1)
+\|\widetilde u_0 \|_X
+\]</span></p>
+<p>To</p>
