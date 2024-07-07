@@ -5,26 +5,7 @@
     
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]  // 添加 '$$' 和 '\(' '\)' 作为行内数学公式的识别标记
-        },
-        startup: {
-          pageReady: () => {
-            return MathJax.startup.defaultPageReady().then(() => {
-              document.querySelectorAll("script[type='math/tex']").forEach((node) => {
-                const text = node.textContent;
-                const display = !!node.type.match(/; *mode=display/);
-                const math = MathJax.tex2chtml(text, {display});
-                node.parentNode.replaceChild(math, node);
-              });
-            });
-          }
-        }
-      };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   </head>
 
