@@ -8,7 +8,7 @@ title: Thickness-Averaging Simulation (TAS)
 **Thickness-Averaging Simulation** (TAS) is a framework developed for accelerating SOFC numerical simulation, which involves some properties of multiscale analysis.
 
 <div style="text-align: center;">
-    <img src="https://picx.zhimg.com/v2-981dd6300409dddb308af401857fc05c_1440w.png?source=d16d100b" style="max-width: 75%; height: auto;">
+    <img src="https://picx.zhimg.com/v2-981dd6300409dddb308af401857fc05c_1440w.png?source=d16d100b" style="max-width: 60%; height: auto;">
     <div style="color: grey; opacity: 0.8;">Schematic diagram of TAS.</div>
 </div>
 
