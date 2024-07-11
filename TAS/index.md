@@ -53,11 +53,13 @@ When used in averaging an convection-diffusion-reaction equation, for example
 $$
 \phi_t + \boldsymbol{u}\cdot\nabla\phi - k \Delta \phi + \sigma\phi = 0 \tag{5} 
 $$
+
 $$
 \Rightarrow {\langle\phi\rangle}_t + \langle\boldsymbol{u}\rangle\cdot\nabla\langle\phi\rangle - k\Delta_2\langle\phi\rangle + \sigma\langle\phi\rangle + \langle\widetilde{\boldsymbol{u}}\cdot\nabla\widetilde{\phi}\rangle - k \left. \phi_{,z} \right \vert_0^H/H = 0 \tag{6}
 $$
 
 Then subtract the averaged equation (6) from the primitive equation (5),
+
 $$
 \begin{array}{ll}
     \widetilde{\phi}_t + \widetilde{\boldsymbol{u}}\cdot\nabla\langle\phi\rangle + \langle\boldsymbol{u}\rangle\cdot\nabla\widetilde{\phi} + \widetilde{\boldsymbol{u}}\cdot\nabla\widetilde{\phi} - \langle\widetilde{\boldsymbol{u}}\cdot\nabla\widetilde{\phi}\rangle - k \Delta \widetilde{\phi} \\
