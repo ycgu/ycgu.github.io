@@ -5,6 +5,9 @@ date: 2023-07-01
 ---
 
 # The Orthogonal Decomposition Theorem
+
+---
+
 Let $V$ be a Hilbert space and $M\subset V$ a closed subspace of $V$. Then
 (i) $M^\bot$ is a closed subspace of $V$.
 (ii) $V$ can be represented as the direct sum of $M$ and its orthogonal complement $M^\bot$
