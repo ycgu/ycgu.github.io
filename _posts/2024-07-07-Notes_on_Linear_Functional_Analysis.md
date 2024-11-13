@@ -28,6 +28,9 @@ Let $V$ be a Hilbert space and $M$ a vector subspace of $V$ . The following cond
 (ii) $(M^\bot)^\bot = M$.
 
 # Orthogonal projection
+
+---
+
 Let $M$ be a closed subspace of a Hilbert space $V$. The linear projection $P_M$ corresponding to the decomposition
 
 $$
@@ -41,6 +44,9 @@ $$
 is called the orthogonal projection onto the subspace $M$ s.t. $\parallel P_M\parallel=1$ (unit norm).
 
 # Riesz Representation Theorem
+
+---
+
 Let $V$ be a Hilbert space and let $f$ be a continuous linear functional on $V$. Then there exists a unique element $\boldsymbol u\in V$ such that
 $$
 f(\boldsymbol v) = (\boldsymbol v,\boldsymbol u),\;\forall \boldsymbol v\in V
@@ -70,6 +76,9 @@ $$
 where$(V\prime)\prime$ is the bidual of $V$.
 
 # Adjoint of a Continuous Operator
+
+---
+
 Let $U$, $V$, $W$ be inner product spaces and let $A$, $A_i\in\mathcal L(U,V), i = 1,2$, and $B\in \mathcal L(V,W)$. The following properties hold.
 (i) Adjoint of a linear combination of operators is equal to the linear combination of the corresponding adjoint operators with complex conjugate coefficients
 $$
@@ -96,7 +105,10 @@ $$
 (A^\ast)^\ast = A
 $$
 
-# Symmetric and Self-Adjoint Operators. 
+# Symmetric and Self-Adjoint Operators
+
+---
+
 An operator $A$ defined on a dense subspace $D(A)$ of a Hilbert space $U$ into itself is said to be symmetric, if $A\subset A^\ast$, i.e.,
 $$
 D(A)\subset D(A^\ast) \;and\; A^\ast|_{D(A)} = A
@@ -115,6 +127,9 @@ $$
 for every $\boldsymbol u, \boldsymbol v\in V$.
 
 # Some norms in Soblev Spaces
+
+---
+
 Classical $H^1$ Sobolev space consisting of all $L^2$-functions whose distributional derivatives are also functions, and they are $L^2$-integrable as well,
 $$
 H^1(\Omega) :=\{u\in L^2(\Omega) : \dfrac{\partial u}{\partial x_i} \in L^2(\Omega), i = 1,\;\cdots,N\}
@@ -161,6 +176,9 @@ $$
 $$
 
 # Variational formulation for diffusion-convection-reaction eqaution
+
+---
+
 $$
 \left\{\begin{array}{ll}
 u\in H^1_{\Gamma_1}(\Omega) \\[2ex]
