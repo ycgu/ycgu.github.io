@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Thickness-Averaging Simulation (TAS)
-permalink: /TAS/
+#permalink: /TAS/
 ---
 
 # Thickness-Averaging Simulation
