@@ -20,20 +20,45 @@ ___
 For a fucntion $\phi \in V \subset \mathbb{R}^3$, based on direct sum decomposition $V = \langle V \rangle \oplus \widetilde{V}$, it can be decomposed as
 
 $$
-\left\langle\phi\left(x,y,t\right)\right\rangle:=\int\!\!\!\int\!\!\!\int\!\!\!\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right)\phi\left(\xi,\eta,\zeta,\tau\right)d\xi d\eta d\zeta d\tau \tag{1}
+\left\langle\phi\left(x,y,t\right)\right\rangle:= \frac{\int\!\!\!\int\!\!\!\int\!\!\!\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right)\phi\left(\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau}{\int\!\!\!\int\!\!\!\int\!\!\!\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau} \tag{1}
 $$
 
 $$
 \phi\left(x,y,z,t\right)=\left\langle\phi\left(x,y,t\right)\right\rangle+\widetilde\phi\left(x,y,z,t\right) \tag{2}
 $$
 
-where $\langle \phi \rangle \in \langle V \rangle \subset \mathbb{R}^2$ and $\widetilde{\phi} \in \widetilde{V} = \langle V \rangle^\perp \subset \mathbb{R}^3$. $\mathscr{G}$ is the convolution kernel commonly used in low-pass filtering in LES derivation, based on a hybrid Box-Delta filter.
+where $\langle \phi \rangle \in \langle V \rangle \subset \mathbb{R}^2$ and $\widetilde{\phi} \in \widetilde{V} = \langle V \rangle^\perp \subset \mathbb{R}^3$. $\mathscr{G}$ is the convolution kernel commonly used in low-pass filtering in LES derivation, based on a hybrid Box-Gaussian filter.
 
 $$
-\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) = \frac1H\delta\left(x-\xi\right)\delta\left(y-\eta\right)\delta\left(t-\tau\right) \tag{3}
+\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) = \mathcal{K} \left( x,y,t,\xi,\eta,\tau \right) \otimes \mathcal{B} \left( z, \zeta \right) \tag{3}
+$$
+where
+$$
+\mathcal{K}\left(x,y,t,\xi,\eta,\tau\right) = \frac{1}{\left( \sqrt{2\pi} \sigma \right)^3} \exp \left( - \frac{\left( x - \xi \right)^2 + \left( y - \eta \right)^2 + \left( t - \tau \right)^2}{2 \sigma^2} \right) \tag{4}
+$$
+and $\mathcal{B}_i \left( z, \zeta \right)$ for layer $i$ with $z \in \left[ h_i,\,h_{i+1} \right]$,
+$$
+\mathcal{B}_i \left( z,\zeta \right) = \left\{ 
+		\begin{array}{ll}
+			1, & \text{if } \zeta \in \left[ h_i,\,h_{i+1} \right] \\
+			0, & \text{otherwise}
+		\end{array}
+	\right. \tag{5}
 $$
 
-Here, since the flow is laminar, we can safely use the Gaussian function with infinitely small variance $\sigma$ for $xyt$, or in other words, Dirac delta function. In the thickness direction, a box filter with filtering interval the same as layer thickness $H$ is used.
+Here, since the flow is laminar, we can safely use the Gaussian function with infinitely small variance $\sigma$ for $xyt$, or in other words, Dirac delta function. Thus, the filter becomes hybrid Box-Delta form in this case, where
+$$
+\lim_{\sigma \to 0} \mathcal{K}\left(x,y,t,\xi,\eta,\tau\right) = \delta\left(x-\xi\right)\delta\left(y-\eta\right)\delta\left(t-\tau\right) \tag{6}
+$$
+
+Other types of averaging technique can be defined by replacing $\mathcal{B}$ with other kernel function, which essentiially project function $\phi$ into other finite-dimensional spaces. For example, the electrical potential in SOFC electrode may look like an exponential function , for example in the form of $a_1 \exp \left( a_2 z \right)$, by minimizing the $L^2$ error, $a_1$ and $a_2$ can be solved by
+$$
+\begin{array}{l}
+    & \int \phi\left( \zeta \right) \exp \left( a_2 \zeta \right) d\zeta = a_1 \int \exp\left( 2 a_2 \zeta \right) d\zeta \\
+    & \int \phi\left( \zeta \right) \zeta \exp \left( a_2 \zeta \right) d\zeta = a_1 \int \zeta \exp\left( 2 a_2 \zeta \right) d\zeta
+\end{array} \tag{7}
+$$
+Since the basis function is nonlinear concerning the DOFs, a general solution strategy doesn't exist.
 
 # <font size=5>*Thicknes-averaging of an equation*</font>
 
