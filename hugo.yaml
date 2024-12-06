@@ -3,6 +3,13 @@ languageCode: en-us
 title: Yuchen's blog
 theme: ["PaperMod"]
 
+params:
+  assets:
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
+
 menu:
   main:
     - identifier: archives # 需做额外配置，具体参考下文
