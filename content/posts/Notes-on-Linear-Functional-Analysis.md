@@ -1,5 +1,5 @@
 ---
-date:  '2024-12-07 01:31:55'
+date:  '2024-12-07T01:46:39+09:00'
 draft: false
 title: 'Research Note on Linear Functional Analysis'
 ---
