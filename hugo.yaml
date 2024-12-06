@@ -11,6 +11,9 @@ params:
     apple_touch_icon: "apple-touch-icon.png"
     theme_color: "#2e2e33"
     msapplication_TileColor: "#2e2e33"
+  mainSections:
+    - posts
+
 
 menu:
   main:
