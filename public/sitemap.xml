@@ -5,11 +5,17 @@
     <loc>http://localhost:1313/posts/my-first-post/</loc>
     <lastmod>2024-12-06T21:38:28+09:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-12-06T21:38:28+09:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-12-06T21:38:28+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-12-06T21:38:28+09:00</lastmod>
+    <loc>http://localhost:1313/slides/pre1/</loc>
+    <lastmod>2024-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/slides/</loc>
+    <lastmod>2024-12-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
