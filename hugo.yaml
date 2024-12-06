@@ -12,8 +12,6 @@ params:
     theme_color: "#2e2e33"
     msapplication_TileColor: "#2e2e33"
 
-date: {{ now.Format "2006-01-02T15:04:05Z07:00" }}
-
 menu:
   main:
     - identifier: archives # 需做额外配置，具体参考下文
