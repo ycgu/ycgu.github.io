@@ -9,6 +9,7 @@ params:
 
   ShowToc: true
   tocOpen: true
+  math: true
 
   assets:
     favicon: "favicon.ico"
@@ -29,7 +30,7 @@ params:
   homeInfoParams:
     Title: "👋 Welcome!"
     Content: >
-      Hi, this is 
+      Hi there, this is Yuchen. I'm will posting some of my research notes on applied math, numerical simulation, SOFC model and SOFC engineering practices on this website.
       
       - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
       
