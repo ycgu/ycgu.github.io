@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Yuchen&#39;s blog</title>
+    <title>Yuchen&#39;s Technical Blog</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Yuchen&#39;s blog</description>
+    <description>Recent content on Yuchen&#39;s Technical Blog</description>
     <generator>Hugo -- 0.139.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Dec 2024 21:38:28 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2024 01:46:39 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Research Note on Linear Functional Analysis</title>
+      <link>http://localhost:1313/posts/notes-on-linear-functional-analysis/</link>
+      <pubDate>Sat, 07 Dec 2024 01:46:39 +0900</pubDate>
+      <guid>http://localhost:1313/posts/notes-on-linear-functional-analysis/</guid>
+      <description>&lt;h1 id=&#34;the-orthogonal-decomposition-theorem&#34;&gt;The Orthogonal Decomposition Theorem&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Let $V$ be a Hilbert space and $M\subset V$ a closed subspace of $V$. Then
+(i) $M^\bot$ is a closed subspace of $V$.
+(ii) $V$ can be represented as the direct sum of $M$ and its orthogonal complement $M^\bot$&lt;/p&gt;
+&lt;p&gt;$$
+V=M\oplus M^\bot
+$$&lt;/p&gt;
+&lt;p&gt;i.e., every vector $v\in V$ can be uniquely decomposed into two orthogonal vectors $\boldsymbol m$, $\boldsymbol n$, s.t.&lt;/p&gt;
+&lt;p&gt;$$
+\boldsymbol v=\boldsymbol m+\boldsymbol n, \boldsymbol m\in M,\boldsymbol n\in M^\bot
+$$&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
