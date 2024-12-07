@@ -34,7 +34,11 @@ $$&lt;/p&gt;</description>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
 &lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;
-&lt;p&gt;This is new content!!&lt;/p&gt;</description>
+&lt;p&gt;This is new content!!&lt;/p&gt;
+&lt;p&gt;formula rendering test:
+$$
+a+b=c
+$$&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
