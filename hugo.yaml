@@ -1,6 +1,6 @@
 baseURL: https://ycgu.github.io/
 languageCode: en-us
-title: Yuchen's blog
+title: Yuchen's Technical Blog
 theme: ["PaperMod"]
 
 params:
@@ -11,9 +11,15 @@ params:
     apple_touch_icon: "apple-touch-icon.png"
     theme_color: "#2e2e33"
     msapplication_TileColor: "#2e2e33"
+  socialIcons:
+    - name: "GitHub"
+      url: "https://github.com/ycgu"
+      icon: "fab fa-github"
+    - name: "LinkedIn"
+      url: "https://linkedin.com/in/yuchen-gu-380b7a2b0"
+      icon: "fab fa-linkedin"
   mainSections:
     - posts
-
 
 menu:
   main:
