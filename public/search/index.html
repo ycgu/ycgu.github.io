@@ -5,12 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Posts | Yuchen&#39;s Technical Blog</title>
+<title>Search | Yuchen&#39;s Technical Blog</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Yuchen&#39;s Technical Blog">
+<meta name="description" content="Search - Yuchen&#39;s Technical Blog">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d72444526d7ecbdb0015438a7fa89054a658bf759d0542e2e5df81ce94b493ee.css" integrity="sha256-1yREUm1&#43;y9sAFUOKf6iQVKZYv3WdBULi5d&#43;BzpS0k&#43;4=" rel="preload stylesheet" as="style">
+<link rel="canonical" href="http://localhost:1313/search/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d72444526d7ecbdb0015438a7fa89054a658bf759d0542e2e5df81ce94b493ee.css" integrity="sha256-1yREUm1&#43;y9sAFUOKf6iQVKZYv3WdBULi5d&#43;BzpS0k&#43;4=" rel="preload stylesheet" as="style"><link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
+<script defer crossorigin="anonymous" src="/assets/js/search.9eef5433ec8e0bdb32d967b39cc413ab76a9bc570a0d43cc17c3e817876484c3.js" integrity="sha256-nu9UM&#43;yOC9sy2WeznMQTq3apvFcKDUPMF8PoF4dkhMM="></script>
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -18,8 +19,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/search/">
 <noscript>
     <style>
         #theme-toggle,
@@ -105,8 +105,8 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search/" title="Search">
-                    <span>Search</span>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span class="active">Search</span>
                 </a>
             </li>
             <li>
@@ -117,43 +117,23 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
+<main class="main">
+
 <header class="page-header">
-  <h1>
-    Posts
-  </h1>
+    <h1>Search <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </h1>
+    <div class="post-meta"></div>
 </header>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Research Note on Linear Functional Analysis
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Orthogonal Decomposition Theorem Let $V$ be a Hilbert space and $M\subset V$ a closed subspace of $V$. Then (i) $M^\bot$ is a closed subspace of $V$. (ii) $V$ can be represented as the direct sum of $M$ and its orthogonal complement $M^\bot$
-$$ V=M\oplus M^\bot $$
-i.e., every vector $v\in V$ can be uniquely decomposed into two orthogonal vectors $\boldsymbol m$, $\boldsymbol n$, s.t.
-$$ \boldsymbol v=\boldsymbol m&#43;\boldsymbol n, \boldsymbol m\in M,\boldsymbol n\in M^\bot $$
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-07 01:46:39 +0900 JST'>December 7, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Research Note on Linear Functional Analysis" href="http://localhost:1313/posts/notes-on-linear-functional-analysis/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">My First Post
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction This is bold text, and this is emphasized text.
-Visit the Hugo website!
-This is new content!!
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-06 21:38:28 +0900 JST'>December 6, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to My First Post" href="http://localhost:1313/posts/my-first-post/"></a>
-</article>
+<div id="searchbox">
+    <input id="searchInput" autofocus placeholder="Search demo site with full text fuzzy search ..."
+        aria-label="search" type="search" autocomplete="off" maxlength="64">
+    <ul id="searchResults" aria-label="search results"></ul>
+</div>
     </main>
     
 <footer class="footer">

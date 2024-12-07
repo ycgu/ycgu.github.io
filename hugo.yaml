@@ -45,12 +45,3 @@ menu:
         - name: Tags
           url: tags/
           weight: 10
-
-    - identifier: archives
-      name: 归档
-      url: /archives/
-      weight: 10
-    - identifier: Slides
-      name: Slides
-      url: /slides/
-      weight: 20
