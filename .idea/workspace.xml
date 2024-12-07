@@ -27,7 +27,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/PaperMod" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -69,7 +69,7 @@
       <workItem from="1733499539075" duration="374000" />
       <workItem from="1733500170147" duration="12000" />
       <workItem from="1733500196595" duration="380000" />
-      <workItem from="1733531173102" duration="7480000" />
+      <workItem from="1733531173102" duration="7683000" />
     </task>
     <servers />
   </component>
