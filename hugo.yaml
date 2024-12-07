@@ -1,0 +1,51 @@
+baseURL: https://ycgu.github.io/
+languageCode: en-us
+title: Yuchen's Technical Blog
+theme: ["PaperMod"]
+
+enableEmoji: true
+
+params:
+
+  ShowToc: true
+  tocOpen: true
+  math: false
+
+  assets:
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
+    theme_color: "#2e2e33"
+    msapplication_TileColor: "#2e2e33"
+
+  socialIcons:
+    - name: GitHub
+      title: Github
+      url: "https://github.com/ycgu"
+    - name: LinkedIn
+      title: LinkedIn
+      url: "https://linkedin.com/in/yuchen-gu-380b7a2b0"
+
+  homeInfoParams:
+    Title: "👋 Welcome!"
+    Content: >
+      Hi there, this is Yuchen. I'm will post some of my research notes on applied math, numerical simulation, SOFC model and SOFC engineering practices here.
+      
+      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+      
+      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
+      
+      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+
+menu:
+  main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
