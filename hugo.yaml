@@ -12,12 +12,12 @@ params:
     theme_color: "#2e2e33"
     msapplication_TileColor: "#2e2e33"
   socialIcons:
-    - name: "GitHub"
+    - name: GitHub
+      title: Github
       url: "https://github.com/ycgu"
-      icon: "fab fa-github"
-    - name: "LinkedIn"
+    - name: LinkedIn
+      title: LinkedIn
       url: "https://linkedin.com/in/yuchen-gu-380b7a2b0"
-      icon: "fab fa-linkedin"
   mainSections:
     - posts
 
