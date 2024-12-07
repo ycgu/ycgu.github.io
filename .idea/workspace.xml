@@ -17,9 +17,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b2852bc-40e1-444d-804b-9b79c71684cc" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/hugo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/hugo.yml" afterDir="false" />
-    </list>
+    <list default="true" id="1b2852bc-40e1-444d-804b-9b79c71684cc" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +73,7 @@
       <workItem from="1733500170147" duration="12000" />
       <workItem from="1733500196595" duration="380000" />
       <workItem from="1733531173102" duration="7683000" />
-      <workItem from="1733540118356" duration="553000" />
+      <workItem from="1733540118356" duration="960000" />
     </task>
     <servers />
   </component>
