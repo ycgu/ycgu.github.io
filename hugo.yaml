@@ -9,7 +9,7 @@ params:
 
   ShowToc: true
   tocOpen: true
-  math: true
+  math: false
 
   assets:
     favicon: "favicon.ico"
