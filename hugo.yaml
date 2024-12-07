@@ -8,7 +8,6 @@ enableEmoji: true
 params:
 
   ShowToc: true
-  showTocOnHome: true
   tocOpen: true
 
   assets:
