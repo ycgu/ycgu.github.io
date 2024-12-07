@@ -2,6 +2,8 @@
 date:  '2024-12-07T01:46:39+09:00'
 draft: false
 title: 'Research Note on Linear Functional Analysis'
+tags: ["Math"]
+author: ["Yuchen Gu"]
 ---
 
 # The Orthogonal Decomposition Theorem
