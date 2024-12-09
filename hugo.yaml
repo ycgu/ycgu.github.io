@@ -49,12 +49,6 @@ params:
     Title: "👋 Welcome!"
     Content: >
       Hi there, this is Yuchen. I'm will post some of my research notes on applied math, numerical simulation, SOFC model and SOFC engineering practices here.
-      
-      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
-      
-      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
-      
-      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
 
 markup:
   goldmark:
