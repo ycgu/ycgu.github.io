@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Yuchen&#39;s Technical Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Yuchen&#39;s Technical Blog</description>
+    <generator>Hugo -- 0.139.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Dec 2024 04:56:54 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thickness-Averaging Simulation (TAS)</title>
+      <link>http://localhost:1313/posts/tas/</link>
+      <pubDate>Mon, 09 Dec 2024 04:56:54 +0900</pubDate>
+      <guid>http://localhost:1313/posts/tas/</guid>
+      <description>&lt;h1 id=&#34;thickness-averaging-simulation&#34;&gt;Thickness-Averaging Simulation&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Thickness-Averaging Simulation&lt;/strong&gt; (TAS) is a framework developed for accelerating SOFC numerical simulation, which involves some properties of multiscale analysis.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;https://picx.zhimg.com/v2-981dd6300409dddb308af401857fc05c_1440w.png?source=d16d100b&#34; style=&#34;max-width: 60%; height: auto;&#34;&gt;
+    &lt;div style=&#34;color: grey; opacity: 0.8;&#34;&gt;Schematic diagram of TAS.&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;font-size5thicknes-averaging-of-a-functionfont&#34;&gt;&lt;font size=5&gt;&lt;em&gt;Thicknes-averaging of a function&lt;/em&gt;&lt;/font&gt;&lt;/h1&gt;
+&lt;p&gt;For a fucntion $\phi \in V \subset \mathbb{R}^3$, based on direct sum decomposition $V = \langle V \rangle \oplus \widetilde{V}$, it can be decomposed as&lt;/p&gt;
+&lt;p&gt;$$
+\left\langle\phi\left(x,y,t\right)\right\rangle:= \frac{\int!!!\int!!!\int!!!\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right)\phi\left(\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau}{\int!!!\int!!!\int!!!\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau} \tag{1}
+$$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Research Note on Linear Functional Analysis</title>
+      <link>http://localhost:1313/posts/notes-on-linear-functional-analysis/</link>
+      <pubDate>Sat, 07 Dec 2024 01:46:39 +0900</pubDate>
+      <guid>http://localhost:1313/posts/notes-on-linear-functional-analysis/</guid>
+      <description>&lt;h1 id=&#34;the-orthogonal-decomposition-theorem&#34;&gt;The Orthogonal Decomposition Theorem&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Let $V$ be a Hilbert space and $M\subset V$ a closed subspace of $V$. Then
+(i) $M^\bot$ is a closed subspace of $V$.
+(ii) $V$ can be represented as the direct sum of $M$ and its orthogonal complement $M^\bot$&lt;/p&gt;
+&lt;p&gt;$$
+V=M\oplus M^\bot
+$$&lt;/p&gt;
+&lt;p&gt;i.e., every vector $v\in V$ can be uniquely decomposed into two orthogonal vectors $\boldsymbol m$, $\boldsymbol n$, s.t.&lt;/p&gt;
+&lt;p&gt;$$
+\boldsymbol v=\boldsymbol m+\boldsymbol n, \boldsymbol m\in M,\boldsymbol n\in M^\bot
+$$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Fri, 06 Dec 2024 21:38:28 +0900</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
