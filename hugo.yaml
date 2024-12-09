@@ -1,12 +1,27 @@
 baseURL: https://ycgu.github.io/
 languageCode: en-us
 title: Yuchen's Technical Blog
+paginate: 5
 theme: ["PaperMod"]
 
 enableEmoji: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+pygmentsUseClasses: true
+enableInlineShortcodes: true
+mainsections: ["posts"]
+
+minify:
+  disableXML: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 params:
-
   ShowToc: true
   tocOpen: true
   math: false
