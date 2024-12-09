@@ -22,6 +22,9 @@ outputs:
     - JSON
 
 params:
+  env: production
+  defaultTheme: auto
+  ShowReadingTime: true
   ShowToc: true
   tocOpen: true
   math: false
