@@ -67,6 +67,7 @@ $$
 $$
 Since the basis function is nonlinear concerning the DOFs, a general solution strategy doesn't exist.
 
+---
 # <font size=5>*Thicknes-averaging of an equation*</font>
 
 Same as filtering in LES, thicknes-averaging has some properties,
@@ -116,6 +117,11 @@ The above steps are unconditionally valid without any assumptions introduced. Eq
 
 # <font size=5>*Approximate sub-grid solution*</font>
 
-# <font size=5>*Approximate sub-grid solution*</font>
+---
+# <font size=5>*Variational multiscale method*</font>
+Suppose the primitive equation defined on domain $\Omega$ is $\mathcal{L} u = f$ with boundary condition $u = g$ on $\partial \Omega$. The weak form equation is,
 
-# <font size=5>*Approximate sub-grid solution*</font>
+$$
+\left(v,\mathcal{L} u\right) = \left(v,f\right) - \left(v,\mathcal{L}u_0\right) \tag{2.1}
+$$
+where $u,v \in H^1_0 \left(\Omega\right)$. Once the trial and test function space are decomposed into a resolved $\langle\cdot\rangle$ and a subgrid one $\widetilde{\cdot}$, Eqn.(2.1) becomes,
