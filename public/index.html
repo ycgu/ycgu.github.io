@@ -188,7 +188,7 @@
   <div class="entry-content">
     <p>Thickness-Averaging Simulation Thickness-Averaging Simulation (TAS) is a framework developed for accelerating SOFC numerical simulation, which involves some properties of multiscale analysis.
 Schematic diagram of TAS. Thicknes-averaging of a function For a fucntion $\phi \in V \subset \mathbb{R}^3$, based on direct sum decomposition $V = \langle V \rangle \oplus \widetilde{V}$, it can be decomposed as
-$$ \left\langle\phi\left(x,y,t\right)\right\rangle:= \frac{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right)\phi\left(\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau}{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau} \tag{1} $$
+$$ \left\langle\phi\left(x,y,t\right)\right\rangle:= \frac{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right)\phi\left(\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau}{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau} \tag{1} $$$$ \phi\left(x,y,z,t\right)=\left\langle\phi\left(x,y,t\right)\right\rangle&#43;\widetilde\phi\left(x,y,z,t\right) \tag{2} $$where $\langle \phi \rangle \in \langle V \rangle \subset \mathbb{R}^2$ and $\widetilde{\phi} \in \widetilde{V} = \langle V \rangle^\perp \subset \mathbb{R}^3$. $\mathscr{G}$ is the convolution kernel commonly used in low-pass filtering in LES derivation, based on a hybrid Box-Gaussian filter.
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2024-12-09 04:56:54 +0900 JST'>December 9, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Yuchen Gu</footer>
@@ -202,12 +202,11 @@ $$ \left\langle\phi\left(x,y,t\right)\right\rangle:= \frac{\int_{\Omega\times[0,
   </header>
   <div class="entry-content">
     <p>The Orthogonal Decomposition Theorem Let $V$ be a Hilbert space and $M\subset V$ a closed subspace of $V$. Then (i) $M^\bot$ is a closed subspace of $V$. (ii) $V$ can be represented as the direct sum of $M$ and its orthogonal complement $M^\bot$
-$$ V=M\oplus M^\bot $$
-i.e., every vector $v\in V$ can be uniquely decomposed into two orthogonal vectors $\boldsymbol m$, $\boldsymbol n$, s.t.
-$$ \boldsymbol v=\boldsymbol m&#43;\boldsymbol n, \boldsymbol m\in M,\boldsymbol n\in M^\bot $$
+$$ V=M\oplus M^\bot $$i.e., every vector $v\in V$ can be uniquely decomposed into two orthogonal vectors $\boldsymbol m$, $\boldsymbol n$, s.t.
+$$ \boldsymbol v=\boldsymbol m&#43;\boldsymbol n, \boldsymbol m\in M,\boldsymbol n\in M^\bot $$COROLLARY Let $V$ be a Hilbert space and $M$ a vector subspace of $V$ . The following conditions are equivalent to each other (i) $M$ is closed. (ii) $(M^\bot)^\bot = M$.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-12-07 01:46:39 +0900 JST'>December 7, 2024</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Yuchen Gu</footer>
+  <footer class="entry-footer"><span title='2024-12-07 01:46:39 +0900 JST'>December 7, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Yuchen Gu</footer>
   <a class="entry-link" aria-label="post link to Research Note on Linear Functional Analysis" href="http://localhost:1313/posts/notes-on-linear-functional-analysis/"></a>
 </article>
 

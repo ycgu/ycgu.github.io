@@ -36,10 +36,12 @@ $$
 \mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) = \mathcal{K} \left( x,y,t,\xi,\eta,\tau \right) \otimes \mathcal{B} \left( z, \zeta \right) \tag{3}
 $$
 where
+
 $$
 \mathcal{K}\left(x,y,t,\xi,\eta,\tau\right) = \frac{1}{\left( \sqrt{2\pi} \sigma \right)^3} \exp \left( - \frac{\left( x - \xi \right)^2 + \left( y - \eta \right)^2 + \left( t - \tau \right)^2}{2 \sigma^2} \right) \tag{4}
 $$
-and $\mathcal{B}_i \left( z, \zeta \right)$ for layer $i$ with $z \in \left[ h_i,\,h_{i+1} \right]$,
+and $\mathcal{B}_i\left( z, \zeta \right)$ for layer $i$ with $z \in \left[ h_i,\,h_{i+1} \right]$,
+
 $$
 \mathcal{B}_i \left( z,\zeta \right) = \left\{ 
 		\begin{array}{ll}
@@ -50,11 +52,13 @@ $$
 $$
 
 Here, since the flow is laminar, we can safely use the Gaussian function with infinitely small variance $\sigma$ for $xyt$, or in other words, Dirac delta function. Thus, the filter becomes hybrid Box-Delta form in this case, where
+
 $$
 \lim_{\sigma \to 0} \mathcal{K}\left(x,y,t,\xi,\eta,\tau\right) = \delta\left(x-\xi\right)\delta\left(y-\eta\right)\delta\left(t-\tau\right) \tag{6}
 $$
 
 Other types of averaging technique can be defined by replacing $\mathcal{B}$ with other kernel function, which essentiially project function $\phi$ into other finite-dimensional spaces. For example, the electrical potential in SOFC electrode may look like an exponential function , for example in the form of $a_1 \exp \left( a_2 z \right)$, by minimizing the $L^2$ error, $a_1$ and $a_2$ can be solved by
+
 $$
 \begin{array}{l}
     & \int \phi\left( \zeta \right) \exp \left( a_2 \zeta \right) d\zeta = a_1 \int \exp\left( 2 a_2 \zeta \right) d\zeta \\

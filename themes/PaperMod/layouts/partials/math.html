@@ -1,17 +1,9 @@
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
-  window.MathJax = {
+  MathJax = {
     tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],  // 行内公式，支持 $...$ 和 \( ... \)
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],  // 块公式，支持 $$...$$ 和 \[ ... \]
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],  // 忽略某些HTML标签中的内容
-      renderActions: {
-        addMenu: [0, '', '']  // 禁用右键菜单（如果需要，可以移除此项）
-      }
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
+      inlineMath: [['\\(', '\\)'], ['$', '$']]      // inline
     }
   };
 </script>

@@ -22,9 +22,11 @@
 &lt;hr&gt;
 &lt;h1 id=&#34;font-size5thicknes-averaging-of-a-functionfont&#34;&gt;&lt;font size=5&gt;&lt;em&gt;Thicknes-averaging of a function&lt;/em&gt;&lt;/font&gt;&lt;/h1&gt;
 &lt;p&gt;For a fucntion $\phi \in V \subset \mathbb{R}^3$, based on direct sum decomposition $V = \langle V \rangle \oplus \widetilde{V}$, it can be decomposed as&lt;/p&gt;
-&lt;p&gt;$$
+$$
 \left\langle\phi\left(x,y,t\right)\right\rangle:= \frac{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right)\phi\left(\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau}{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau} \tag{1}
-$$&lt;/p&gt;</description>
+$$$$
+\phi\left(x,y,z,t\right)=\left\langle\phi\left(x,y,t\right)\right\rangle+\widetilde\phi\left(x,y,z,t\right) \tag{2}
+$$&lt;p&gt;where $\langle \phi \rangle \in \langle V \rangle \subset \mathbb{R}^2$ and $\widetilde{\phi} \in \widetilde{V} = \langle V \rangle^\perp \subset \mathbb{R}^3$. $\mathscr{G}$ is the convolution kernel commonly used in low-pass filtering in LES derivation, based on a hybrid Box-Gaussian filter.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Research Note on Linear Functional Analysis</title>
@@ -36,13 +38,15 @@ $$&lt;/p&gt;</description>
 &lt;p&gt;Let $V$ be a Hilbert space and $M\subset V$ a closed subspace of $V$. Then
 (i) $M^\bot$ is a closed subspace of $V$.
 (ii) $V$ can be represented as the direct sum of $M$ and its orthogonal complement $M^\bot$&lt;/p&gt;
-&lt;p&gt;$$
+$$
 V=M\oplus M^\bot
-$$&lt;/p&gt;
-&lt;p&gt;i.e., every vector $v\in V$ can be uniquely decomposed into two orthogonal vectors $\boldsymbol m$, $\boldsymbol n$, s.t.&lt;/p&gt;
-&lt;p&gt;$$
+$$&lt;p&gt;i.e., every vector $v\in V$ can be uniquely decomposed into two orthogonal vectors $\boldsymbol m$, $\boldsymbol n$, s.t.&lt;/p&gt;
+$$
 \boldsymbol v=\boldsymbol m+\boldsymbol n, \boldsymbol m\in M,\boldsymbol n\in M^\bot
-$$&lt;/p&gt;</description>
+$$&lt;p&gt;&lt;strong&gt;COROLLARY&lt;/strong&gt;
+Let $V$ be a Hilbert space and $M$ a vector subspace of $V$ . The following conditions are equivalent to each other
+(i) $M$ is closed.
+(ii) $(M^\bot)^\bot = M$.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
