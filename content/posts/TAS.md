@@ -115,3 +115,7 @@ The above steps are unconditionally valid without any assumptions introduced. Eq
 >$\sigma\widetilde{\phi}$: Sub-grid reaction
 
 # <font size=5>*Approximate sub-grid solution*</font>
+
+# <font size=5>*Approximate sub-grid solution*</font>
+
+# <font size=5>*Approximate sub-grid solution*</font>
