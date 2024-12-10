@@ -23,7 +23,7 @@
 &lt;h1 id=&#34;font-size5thicknes-averaging-of-a-functionfont&#34;&gt;&lt;font size=5&gt;&lt;em&gt;Thicknes-averaging of a function&lt;/em&gt;&lt;/font&gt;&lt;/h1&gt;
 &lt;p&gt;For a fucntion $\phi \in V \subset \mathbb{R}^3$, based on direct sum decomposition $V = \langle V \rangle \oplus \widetilde{V}$, it can be decomposed as&lt;/p&gt;
 &lt;p&gt;$$
-\left\langle\phi\left(x,y,t\right)\right\rangle:= \frac{\int!!!\int!!!\int!!!\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right)\phi\left(\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau}{\int!!!\int!!!\int!!!\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau} \tag{1}
+\left\langle\phi\left(x,y,t\right)\right\rangle:= \frac{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right)\phi\left(\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau}{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau} \tag{1}
 $$&lt;/p&gt;</description>
     </item>
     <item>
