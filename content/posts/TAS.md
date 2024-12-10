@@ -39,7 +39,7 @@ where
 $$
 \mathcal{K}\left(x,y,t,\xi,\eta,\tau\right) = \frac{1}{\left( \sqrt{2\pi} \sigma \right)^3} \exp \left( - \frac{\left( x - \xi \right)^2 + \left( y - \eta \right)^2 + \left( t - \tau \right)^2}{2 \sigma^2} \right) \tag{4}
 $$
-and $\mathcal{B}_i \left( z, \zeta \right)$ for layer $i$ with $z \in \left[ h_i,\,h_{i+1} \right]$,
+and \\(\mathcal{B}_i \left( z, \zeta \right)\\) for layer $i$ with $z \in \left[ h_i,\,h_{i+1} \right]$,
 $$
 \mathcal{B}_i \left( z,\zeta \right) = \left\{ 
 		\begin{array}{ll}
