@@ -119,9 +119,43 @@ The above steps are unconditionally valid without any assumptions introduced. Eq
 
 ---
 # <font size=5>*Variational multiscale method*</font>
-Suppose the primitive equation defined on domain $\Omega$ is $\mathcal{L} u = f$ with boundary condition $u = g$ on $\partial \Omega$. The weak form equation is,
+TAS does have some connections with variational multiscale method, which acts as the basis for modern finite element method. Suppose the primitive equation defined on domain $\Omega$ is $\mathcal{L} u = f$ with boundary condition $u = g$ on $\partial \Omega$. The weak form equation is,
 
 $$
 \left(v,\mathcal{L} u\right) = \left(v,f\right) - \left(v,\mathcal{L}u_0\right) \tag{2.1}
 $$
 where $u,v \in H^1_0 \left(\Omega\right)$. Once the trial and test function space are decomposed into a resolved $\langle\cdot\rangle$ and a subgrid one $\widetilde{\cdot}$, Eqn.(2.1) becomes,
+
+$$
+\left(\langle v\rangle + \widetilde{v},\mathcal{L}\left( \langle u\rangle + \widetilde{u}\right)\right) = \left(\langle v\rangle + \widetilde{v},f\right) \tag{2.2}
+$$
+here the boundary condition is absorbed into $u$. Let's assume $\mathcal{L}$ is a linear operator, thus the original problem is decomposed into two subproblems,
+
+$$
+\left\{
+    \begin{array}{l}
+    \left(\langle v\rangle,\mathcal{L}\langle u\rangle + \mathcal{L}\widetilde
+    u\right) = \left(\langle v\rangle,f\right) \\
+    \left(\widetilde{v},\mathcal{L}\langle u\rangle + \mathcal{L}\widetilde{u}\right) = \left(\widetilde{v},f\right)
+\end{array}\right. \tag{2.3}
+$$
+By introducing the adjoint operator $\mathcal{L}^\dagger$ of $\mathcal{L}$. The first subproblem becomes,
+
+$$
+\left(\langle v\rangle,\mathcal{L}\langle u\rangle\right) + \left(\mathcal{L}^\dagger\langle v\rangle,\widetilde u\right) = \left(\langle v\rangle,f\right) \tag{2.4}
+$$
+ The Euler-Lagrange equation for the second subproblem is,
+
+ $$
+ \mathcal{L}\widetilde{u} = f - \mathcal{L}\langle u\rangle \tag{2.5}
+ $$
+which can be solved by the elementwise Green's function as,
+
+$$
+\widetilde{u} = \int G\left(f-\mathcal{L}\langle u\rangle\right) d\Omega = \mathcal{M}\left(f-\mathcal{L}\langle u\rangle\right) \tag{2.6}
+$$
+Then Eqn. (2.4) becomes,
+
+$$
+\boxed{\left(\langle v\rangle,\mathcal{L}\langle u\rangle\right) + \left(\mathcal{L}^\dagger\langle v\rangle,\mathcal{M}\left(f-\mathcal{L}\langle u\rangle\right)\right) = \left(\langle v\rangle,f\right) \tag{2.7}}
+$$
