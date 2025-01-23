@@ -44,7 +44,7 @@ params:
     - name: LinkedIn
       title: LinkedIn
       url: "https://linkedin.com/in/yuchen-gu-380b7a2b0"
-    - name: {{ partial "icons/twitter" . }}
+    - name: onlyfans
       title: OnlyFans
       url: "https://onlyfans.com/u206798690"
 
