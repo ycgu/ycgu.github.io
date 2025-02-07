@@ -45,7 +45,7 @@ params:
       title: LinkedIn
       url: "https://linkedin.com/in/yuchen-gu-380b7a2b0"
     - name: rss
-      title: RSS
+      title: RS
       url: "https://ycgu.github.io/index.xml"
     - name: other
       title: OnlyFans
