@@ -18,7 +18,7 @@ $$
 and
 
 $$
-\frac{\partial A_{kn}^{-1}}{\partial A_{ij}} = \frac{\partial A_{kl}^{-1}}{\partial A_{ij}} A_{lm} A_{mn}^{-1} = - A_{kl}^{-1} \frac{\partial A_{lm}}{\partial A_{ij}} A_{mn}^{-1}
+\frac{\partial A_{kn}^{-1}}{\partial A_{ij}} = \frac{\partial A_{kl}^{-1}}{\partial A_{ij}} A_{lm} A_{mn}^{-1} = - A_{kl}^{-1} \frac{\partial A_{lm}}{\partial A_{ij}} A_{mn}^{-1},
 $$
 
 where
