@@ -40,3 +40,7 @@ $$
 $$
 
 Similar results can be derived for higher order derivatives.
+
+# Commutator error in TAS based on DGM/CPIM
+
+This trick can be useful when coping with commutator error in TAS, since some complex constitutive laws for species transport may be used. Considering the nonlinearity of these models is in the form of matrix inverse, some special techniques, different from those used in convection term treatment in LES, should be developed.  
