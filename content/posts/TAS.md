@@ -20,7 +20,7 @@ ___
 
 # <font size=5>*Thicknes-averaging of a function*</font>
 
-For a fucntion $\phi \in V \subset \mathbb{R}^3$, based on direct sum decomposition $V = \langle V \rangle \oplus \widetilde{V}$, it can be decomposed as
+For a function $\phi \in V \subset \mathbb{R}^3$, based on direct sum decomposition $V = \langle V \rangle \oplus \widetilde{V}$, it can be decomposed as
 
 $$
 \left\langle\phi\left(x,y,t\right)\right\rangle:= \frac{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right)\phi\left(\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau}{\int_{\Omega\times[0,T]}\mathscr G\left(x,y,z,t,\xi,\eta,\zeta,\tau\right) d\xi d\eta d\zeta d\tau} \tag{1}
