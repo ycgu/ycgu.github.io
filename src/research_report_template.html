@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>研究进展报告</title>
+
+  <!-- 数学公式支持：需要联网加载 MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <style>
+    :root {
+      --text: #222;
+      --muted: #666;
+      --line: #d9dde3;
+      --soft: #f5f7fa;
+      --accent: #214f8b;
+      --accent-soft: #eaf1f8;
+      --warning: #8a5a00;
+      --warning-soft: #fff6df;
+      --page-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: #edf0f4;
+      font-family:
+        -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Hiragino Sans", "Yu Gothic",
+        "Noto Sans CJK JP", "Microsoft YaHei",
+        Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .page {
+      width: min(var(--page-width), calc(100% - 32px));
+      margin: 32px auto;
+      padding: 56px 68px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    header {
+      padding-bottom: 26px;
+      border-bottom: 3px solid var(--accent);
+      margin-bottom: 34px;
+    }
+
+    .report-type {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 8px 0 14px;
+      font-size: 34px;
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+    }
+
+    .subtitle {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: 120px 1fr 120px 1fr;
+      gap: 8px 18px;
+      font-size: 14px;
+    }
+
+    .meta dt {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .meta dd {
+      margin: 0;
+    }
+
+    nav {
+      margin: 0 0 36px;
+      padding: 18px 22px;
+      background: var(--soft);
+      border-left: 4px solid var(--accent);
+    }
+
+    nav strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    nav a {
+      display: inline-block;
+      margin-right: 18px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin: 38px 0;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      padding-bottom: 8px;
+      color: var(--accent);
+      font-size: 25px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h3 {
+      margin: 26px 0 10px;
+      font-size: 19px;
+    }
+
+    p {
+      margin: 10px 0;
+      text-align: justify;
+    }
+
+    ul, ol {
+      padding-left: 1.4em;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .summary-box,
+    .note-box,
+    .question-box {
+      margin: 18px 0;
+      padding: 18px 22px;
+      border-radius: 4px;
+    }
+
+    .summary-box {
+      background: var(--accent-soft);
+      border-left: 5px solid var(--accent);
+    }
+
+    .note-box {
+      background: var(--soft);
+      border-left: 5px solid #7d8793;
+    }
+
+    .question-box {
+      background: var(--warning-soft);
+      border-left: 5px solid var(--warning);
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    code {
+      padding: 2px 5px;
+      background: #f0f2f5;
+      border-radius: 3px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 16px 18px;
+      background: #f6f8fa;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      line-height: 1.5;
+    }
+
+    figure {
+      margin: 26px 0;
+    }
+
+    figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid var(--line);
+    }
+
+    .figure-placeholder {
+      min-height: 280px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: var(--muted);
+      background:
+        linear-gradient(135deg, #fafbfc 25%, #f4f6f8 25%, #f4f6f8 50%,
+        #fafbfc 50%, #fafbfc 75%, #f4f6f8 75%);
+      background-size: 28px 28px;
+      border: 1px dashed #9aa3ad;
+      text-align: center;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 18px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--soft);
+      text-align: left;
+    }
+
+    .status {
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    .done { color: #1c6b3c; }
+    .doing { color: #8a5a00; }
+    .todo { color: #6a3d8f; }
+
+    .equation {
+      margin: 20px 0;
+      padding: 12px 18px;
+      overflow-x: auto;
+      background: #fbfcfd;
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding-top: 18px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 30px 22px;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .meta {
+        grid-template-columns: 95px 1fr;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 18mm 16mm;
+      }
+
+      body {
+        background: #fff;
+        font-size: 11pt;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      nav {
+        display: none;
+      }
+
+      h2, h3 {
+        break-after: avoid;
+      }
+
+      figure, table, .summary-box, .note-box, .question-box {
+        break-inside: avoid;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header>
+      <div class="report-type">Research Progress Report</div>
+
+      <h1>薄通道流动降阶模型的研究进展</h1>
+
+      <p class="subtitle">
+        Thickness-Averaged Modeling and Numerical Validation
+      </p>
+
+      <dl class="meta">
+        <dt>报告人</dt>
+        <dd>Yuchen Gu</dd>
+
+        <dt>日期</dt>
+        <dd>2026-07-15</dd>
+
+        <dt>所属</dt>
+        <dd>京都大学大学院工学研究科</dd>
+
+        <dt>导师</dt>
+        <dd>导师姓名</dd>
+
+        <dt>报告周期</dt>
+        <dd>2026年7月1日—2026年7月15日</dd>
+
+        <dt>版本</dt>
+        <dd>v1.0</dd>
+      </dl>
+    </header>
+
+    <nav>
+      <strong>目录</strong>
+      <a href="#summary">摘要</a>
+      <a href="#background">研究背景</a>
+      <a href="#method">方法</a>
+      <a href="#results">结果</a>
+      <a href="#issues">问题</a>
+      <a href="#plan">下一步计划</a>
+    </nav>
+
+    <section id="summary">
+      <h2>1. 本期工作摘要</h2>
+
+      <div class="summary-box">
+        <span class="label">核心结论</span>
+        <p>
+          本阶段完成了二维厚度平均模型与三维基准模型的对比，
+          并重点分析了入口发展段和分叉停滞区中的误差来源。
+          结果表明，直通道内速度预测较稳定，而压力和停滞区附近的局部误差仍较明显。
+        </p>
+      </div>
+
+      <ul>
+        <li>完成：二维 TAS 模型的数值实现与网格收敛性检查。</li>
+        <li>完成：与三维 Navier–Stokes 模型的速度、压力对比。</li>
+        <li>进行中：停滞点附近三维输运机制及闭合项分析。</li>
+        <li>待确认：新闭合项是否应保留至当前渐近展开阶次。</li>
+      </ul>
+    </section>
+
+    <section id="background">
+      <h2>2. 研究背景与目标</h2>
+
+      <p>
+        对于厚度远小于面内尺度的流道，直接进行三维数值模拟会带来较高计算成本。
+        本研究希望通过厚度方向解析或半解析处理，构造仅依赖面内坐标
+        \(x,y\) 的降阶模型，同时尽可能保留三维流动的主要物理效应。
+      </p>
+
+      <h3>2.1 本阶段目标</h3>
+
+      <ol>
+        <li>验证厚度平均模型在直通道和分叉流道中的精度。</li>
+        <li>识别速度误差和压力误差的主导来源。</li>
+        <li>判断当前闭合模型在停滞区失效的原因。</li>
+      </ol>
+    </section>
+
+    <section id="method">
+      <h2>3. 数学模型与数值方法</h2>
+
+      <h3>3.1 控制方程</h3>
+
+      <p>
+        三维不可压缩 Navier–Stokes 方程写为
+      </p>
+
+      <div class="equation">
+        \[
+        \rho\left(
+        \frac{\partial \mathbf{u}}{\partial t}
+        +\mathbf{u}\cdot\nabla\mathbf{u}
+        \right)
+        =-\nabla p+\mu\nabla^2\mathbf{u},
+        \qquad
+        \nabla\cdot\mathbf{u}=0.
+        \]
+      </div>
+
+      <p>
+        厚度平均速度定义为
+      </p>
+
+      <div class="equation">
+        \[
+        \langle \mathbf{u}\rangle(x,y)
+        =
+        \frac{1}{h}
+        \int_{-h/2}^{h/2}
+        \mathbf{u}(x,y,z)\,\mathrm{d}z.
+        \]
+      </div>
+
+      <h3>3.2 数值设置</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>参数</th>
+              <th>符号</th>
+              <th>取值</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>通道长度</td>
+              <td>\(L\)</td>
+              <td>4</td>
+              <td>无量纲</td>
+            </tr>
+            <tr>
+              <td>通道宽度</td>
+              <td>\(H\)</td>
+              <td>1</td>
+              <td>无量纲</td>
+            </tr>
+            <tr>
+              <td>运动黏度</td>
+              <td>\(\nu\)</td>
+              <td>0.01</td>
+              <td>基准计算</td>
+            </tr>
+            <tr>
+              <td>时间步长</td>
+              <td>\(\Delta t\)</td>
+              <td>\(10^{-3}\)</td>
+              <td>BDF2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3.3 误差定义</h3>
+
+      <div class="equation">
+        \[
+        E_u(x,y)
+        =
+        \frac{
+        \left\|
+        \langle\mathbf{u}_{3D}\rangle
+        -
+        \mathbf{u}_{2D}
+        \right\|
+        }{
+        \left\|
+        \langle\mathbf{u}_{3D}\rangle
+        \right\|+\varepsilon
+        }.
+        \]
+      </div>
+    </section>
+
+    <section id="results">
+      <h2>4. 主要结果</h2>
+
+      <h3>4.1 速度场对比</h3>
+
+      <figure>
+        <!-- 用真实图片时，把下面的占位框替换为：
+        <img src="figures/velocity_comparison.png" alt="速度场对比">
+        -->
+        <div class="figure-placeholder">
+          在此插入图片<br>
+          例如：figures/velocity_comparison.png
+        </div>
+        <figcaption>
+          图1　三维厚度平均速度与二维模型速度的对比。
+        </figcaption>
+      </figure>
+
+      <p>
+        直通道主体区域内，两种模型的速度分布总体一致。
+        较明显的偏差主要集中在入口发展段以及几何变化较强的区域。
+      </p>
+
+      <h3>4.2 压力场对比</h3>
+
+      <figure>
+        <div class="figure-placeholder">
+          在此插入压力结果图
+        </div>
+        <figcaption>
+          图2　二维与三维模型的压力分布及其差值。
+        </figcaption>
+      </figure>
+
+      <p>
+        与速度相比，压力误差更为显著。
+        当前推测该误差与厚度方向压力变化、入口发展效应以及降阶闭合假设有关。
+      </p>
+
+      <h3>4.3 定量结果</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>算例</th>
+              <th>速度相对误差</th>
+              <th>压力相对误差</th>
+              <th>备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>直通道</td>
+              <td>填写结果</td>
+              <td>填写结果</td>
+              <td>主体区域误差较小</td>
+            </tr>
+            <tr>
+              <td>Y 型流道</td>
+              <td>填写结果</td>
+              <td>填写结果</td>
+              <td>停滞区误差明显</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="issues">
+      <h2>5. 当前问题与讨论</h2>
+
+      <div class="question-box">
+        <span class="label">希望与导师讨论的问题</span>
+        <ol>
+          <li>
+            当前渐近展开中，面内扩散项与压力梯度是否应保留在同一阶？
+          </li>
+          <li>
+            停滞区误差是否主要来自被忽略的厚度方向动量输运？
+          </li>
+          <li>
+            新增闭合项是否与当前截断阶次保持一致？
+          </li>
+        </ol>
+      </div>
+
+      <div class="note-box">
+        <span class="label">当前判断</span>
+        <p>
+          新项并不一定自动提高精度。若新增项只保留了某类三维效应，
+          但忽略了同阶的其他项，可能破坏原模型中的误差抵消，从而导致结果变差。
+        </p>
+      </div>
+    </section>
+
+    <section id="plan">
+      <h2>6. 下一步计划</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>任务</th>
+              <th>状态</th>
+              <th>预计完成时间</th>
+              <th>输出</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>重新整理渐近展开阶次</td>
+              <td class="status doing">进行中</td>
+              <td>7月20日</td>
+              <td>完整推导文档</td>
+            </tr>
+            <tr>
+              <td>检查停滞区局部动量平衡</td>
+              <td class="status todo">待开始</td>
+              <td>7月25日</td>
+              <td>误差项分解图</td>
+            </tr>
+            <tr>
+              <td>补充网格与阶次收敛性测试</td>
+              <td class="status todo">待开始</td>
+              <td>7月30日</td>
+              <td>收敛曲线</td>
+            </tr>
+            <tr>
+              <td>整理论文结果章节</td>
+              <td class="status todo">待开始</td>
+              <td>8月上旬</td>
+              <td>论文初稿</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="references">
+      <h2>7. 参考文献</h2>
+
+      <ol>
+        <li>
+          Author, A., Author, B. “Title of the paper.”
+          <em>Journal Name</em>, volume, pages, year.
+        </li>
+        <li>
+          Author, C. <em>Book Title</em>. Publisher, year.
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      Progress Report · Yuchen Gu · 2026
+    </footer>
+
+  </main>
+</body>
+</html>
