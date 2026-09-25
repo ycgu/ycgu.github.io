@@ -1,6 +1,6 @@
 ---
 date:  '2026-07-22T22:00:01+09:00'
-lastmod: '2026-07-22T22:00:01+09:00'
+lastmod: '2026-09-26T00:27:28+09:00'
 draft: false
 title: 'ScientificPlotter Releases'
 tags: ["ScientificPlotter","macOS","Scientific Visualization"]
@@ -23,9 +23,28 @@ The application currently supports:
 - Versioned `.splot` project files
 - Stable and invite-protected Beta update channels
 
-ScientificPlotter currently requires an Apple Silicon Mac running macOS 13 or later.
+ScientificPlotter 2.0.0 requires an Apple Silicon Mac running macOS 27 or later. This release has been qualified on an M4 Pro Mac.
 
-The application is distributed independently through GitHub rather than the Mac App Store. Depending on your macOS security settings, you may need to allow the application under **System Settings → Privacy & Security** when opening it for the first time.
+The app is distributed through GitHub with ad-hoc signing, without Apple Developer ID signing or notarization. On first launch, macOS may require **Open Anyway** under **System Settings → Privacy & Security**.
+
+---
+
+## Version 2.0.0 — September 26, 2026
+
+This release adds:
+
+- Data analysis and analytical function plotting
+- 2D and 3D finite-element visualization
+- Model and Scene workspaces, including 3D composition and 2D diagrams
+- Custom legends, zoom insets, and flexible figure layouts
+- Expanded colormaps and unified export tools
+- Project checkpoints and workflow improvements
+
+…and more.
+
+Back up existing `.splot` projects and linked FEM files before upgrading. Projects saved in 2.0 may not open in older versions; use **Save As** to preserve the originals.
+
+[Download ScientificPlotter 2.0.0](https://github.com/ycgu/ScientificPlotter-Releases/releases/tag/v2.0.0)
 
 ---
 
