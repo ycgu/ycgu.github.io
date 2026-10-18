@@ -8,6 +8,9 @@ math: true
 ---
 
 To 
+
+{{< themed-figure src="/images/coordinate-transformation/fig1_1d_mapping.svg" alt="1D affine map and 3-point Gauss rule" caption="Fig. 1. Affine map from $[-1,1]$ to $[x_a,x_b]$ and the 3-point Gauss–Legendre rule as a weighted sum." >}}
+
 # Coordinate transformation and numerical quadrature
 
 The derivative of a matrix inverse $\boldsymbol{A}^{-1}$ with respect to $\boldsymbol{A}$ is a 4th order tensor. Since $\dfrac{\partial}{\partial \boldsymbol{A}} \left( \boldsymbol{A}^{-1} \boldsymbol{A} \right) = 0$, $\dfrac{\partial \boldsymbol{A}^{-1}}{\partial \boldsymbol{A}} = - \boldsymbol{A}^{-2}$, but deriving its counterpart based on Einstein notation is not so obvious. Owing to,

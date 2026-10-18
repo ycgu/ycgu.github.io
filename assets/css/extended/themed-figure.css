@@ -1,0 +1,6 @@
+/* themed-figure shortcode. PaperMod adds class "dark" to <body> in dark mode,
+   both from the theme toggle and from the "auto" (follow OS) setting. */
+.themed-figure img { display: block; margin-inline: auto; }
+.themed-figure .tf-dark { display: none; }
+.dark .themed-figure .tf-light { display: none; }
+.dark .themed-figure .tf-dark { display: block; }

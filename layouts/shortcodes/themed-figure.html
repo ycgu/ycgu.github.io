@@ -1,0 +1,18 @@
+{{- /*
+  Figure that follows PaperMod's light/dark theme.
+  Shows `src` in the light theme and its "-dark" sibling in the dark theme
+  (fig1.svg -> fig1-dark.svg); pass dark="..." to name the dark file explicitly.
+  Usage:
+    {{< themed-figure src="/images/post/fig1.svg" alt="..." caption="Fig. 1. ... $x$ ..." >}}
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $ext := path.Ext $src -}}
+{{- $dark := .Get "dark" | default (printf "%s-dark%s" (strings.TrimSuffix $ext $src) $ext) -}}
+{{- $alt := .Get "alt" | default (.Get "caption" | markdownify | plainify) -}}
+<figure class="themed-figure align-center">
+  <img class="tf-light" loading="lazy" src="{{ $src }}" alt="{{ $alt }}">
+  <img class="tf-dark" loading="lazy" src="{{ $dark }}" alt="{{ $alt }}">
+  {{- with .Get "caption" }}
+  <figcaption><p>{{ . | markdownify }}</p></figcaption>
+  {{- end }}
+</figure>
