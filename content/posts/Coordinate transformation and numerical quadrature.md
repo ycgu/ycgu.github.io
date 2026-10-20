@@ -8,7 +8,7 @@ author: ["Yuchen Gu"]
 math: true
 ---
 
-In Galerkin method, the discretization of the governing equation is achieved through converting it into a weak formulation with a finite number of trial and test functions. The weak formulation consists of integrals defined in the simulation domain and Neumann boundaries. To calculate these integrals defined on physical domain, the general strategy, in one sentence, is to convert it into an equivalent integral define on a corresponding reference domain by coordinate transformation and integrate by numerical quadrature. To illustrate how it works, we first consider a one-dimensional case with both coordinate transformation and numerical quadrature, then extend it to higher dimensional cases.
+In Galerkin method, the discretization of the governing equation is achieved through converting it into a weak formulation with a finite number of trial and test functions. The weak formulation consists of integrals defined in the simulation domain and Neumann/Robin boundaries. To calculate these integrals defined on physical domain, the general strategy, in one sentence, is to convert it into an equivalent integral define on a corresponding reference domain by coordinate transformation and integrate by numerical quadrature. To illustrate how it works, we first consider a one-dimensional case with both coordinate transformation and numerical quadrature, then extend it to higher dimensional cases.
 
 # A simple 1D example
 
