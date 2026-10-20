@@ -11,6 +11,7 @@ math: true
 In Galerkin method, the discretization of the governing equation is achieved through converting it into a weak formulation with a finite number of trial and test functions. The weak formulation consists of integrals defined in the simulation domain and Neumann boundaries. To calculate these integrals defined on physical domain, the general strategy, in one sentence, is to convert it into an equivalent integral define on a corresponding reference domain by coordinate transformation and integrate by numerical quadrature. To illustrate how it works, we first consider a one-dimensional case with both coordinate transformation and numerical quadrature, then extend it to higher dimensional cases.
 
 # A simple 1D example
+
 Suppose we have a physical field $f$ defined on a line segment $[x_a,x_b]$, which is mapped from $[-1,1]$ by an affine mapping. The integral of $f$ on that segment
 $$
 \int_{x_a}^{x_b} f(x) \text{ d} x = \int_{-1}^{1} f(\xi) \frac{\partial x}{\partial \xi} \text{ d} \xi
@@ -25,11 +26,13 @@ $J$, so each cell keeps its area.
 {{< themed-figure src="/images/coordinate-transformation/fig1_1d_mapping.svg" alt="1D affine map and 3-point Gauss rule" caption="Fig. 1. Affine map from $[-1,1]$ to $[x_a,x_b]$ and the 3-point Gauss–Legendre rule as a weighted sum." >}}
 
 # Gauss–Legendre quadrature
+
 Then we will dive into the area of Gauss–Legendre rules, which is used for numerical quadrature with the reference interval $[-1,1]$ divided into several cells with length $w_i$. Every node lies inside its own cell. Nodes crowd toward $\pm1$ but never reach the endpoints. A $n$-point rule can integrate polynomials of degree $\le 2n-1$ exactly.
 
 {{< themed-figure src="/images/coordinate-transformation/fig2_gauss_legendre_rules.svg" alt="1D Gauss–Legendre rule" caption="Fig. 2. Gauss–Legendre rules in $[-1,1]$ for $n=1,\dots,8$." >}}
 
 # 2D isoparametric mapping
+
 To extend the above 1D affine mapping to 2D case, we introduce the isoparametric mapping from reference domain $\hat\Omega = [-1,1]^2$ to physical one $\Omega_e$. The green and blue lines are still straight, but on longer parallel after this mapping. Similarly, the physical domain is where the actual simulation domain is discretized, while the reference domain is where we calculate the integral in the weak formulation. Now the jacobian is a 2-by-2 matrix,
 $$
 $\boldsymbol{J}=\dfrac{\partial(x,y)}{\partial(\xi,\eta)}=\begin{bmatrix}\partial x/\partial\xi & \partial x/\partial\eta\\ \partial y/\partial\xi & \partial y/\partial\eta\end{bmatrix}$
